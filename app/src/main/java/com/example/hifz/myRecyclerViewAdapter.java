@@ -1,9 +1,9 @@
 package com.example.hifz;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,25 +11,38 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAdapter.MyVH> {
+public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAdapter.MyVH>
+{
+    Context context;
     List<Students> studentList;
-    public myRecyclerViewAdapter(List<Students> studentList) {
+    public myRecyclerViewAdapter(Context context, List<Students> studentList) {
         this.studentList = studentList;
+        this.context=context;
     }
 
     @NonNull
     @Override
     public myRecyclerViewAdapter.MyVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.singe_item, parent, false);
+        LayoutInflater inflater=LayoutInflater.from(context);
+        int r=R.layout.template;
+        View itemView =inflater.inflate(r,parent, false);
+
+//        View itemView = LayoutInflater.from(parent.getContext())
+//                .inflate(R.layout.singe_item, parent, false);
+
         return new MyVH(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyVH holder, int position) {
+    public void onBindViewHolder(@NonNull myRecyclerViewAdapter.MyVH holder, int position) {
         holder.data=studentList.get(position);
-        holder.textViewId.setText(holder.data.getId());
+        TextView a=holder.textViewId;
+        System.out.println(a.getText());
+        int i=holder.data.getId();
+        System.out.println("id is "+i);
+
+        holder.textViewId.setText(String.valueOf(i));
         holder.textViewName.setText(holder.data.getName());
 
     }
@@ -40,20 +53,22 @@ public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAd
     }
 
 
-    public class MyVH extends RecyclerView.ViewHolder {
+    public static class MyVH extends RecyclerView.ViewHolder {
         //ImageView imageViewFriend;
         TextView textViewId;
         TextView textViewName;
-       // TextView textViewCity;
         Students data;
-        public MyVH(@NonNull View itemView) {
-            super(itemView);
-          
-            textViewId = itemView.findViewById(R.id.textViewId);
-            textViewName = itemView.findViewById(R.id.textViewName);
-            //textViewCity = itemView.findViewById(R.id.textViewCity);
+
+                public MyVH(@NonNull View itemView) {
+                    super(itemView);
+
+                    textViewId = itemView.findViewById(R.id.textViewId);
+                    System.out.println(textViewId.getText());
+                    textViewName = itemView.findViewById(R.id.textViewName);
+                }
+
         }
     }
-}
+
 
 

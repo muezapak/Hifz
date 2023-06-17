@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 //                false);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new myRecyclerViewAdapter(studentList) ;
+        adapter = new myRecyclerViewAdapter(this,studentList) ;
         recyclerView.setAdapter(adapter);
         //adapter.notifyDataSetChanged();
 
