@@ -15,6 +15,20 @@ public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAd
 {
     Context context;
     List<Students> studentList;
+    private OnItemClickListener clickListener;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.clickListener = listener;
+    }
+
+//    private MyVH.OnItemClickListener clickListener;
+//
+//    public void setOnItemClickListener(MyVH.OnItemClickListener listener) {
+//        this.clickListener = listener;
+//    }
+
+
+
     public myRecyclerViewAdapter(Context context, List<Students> studentList) {
         this.studentList = studentList;
         this.context=context;
@@ -44,8 +58,18 @@ public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAd
 
         holder.textViewId.setText(String.valueOf(i));
         holder.textViewName.setText(holder.data.getName());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (clickListener != null) {
+                    clickListener.onItemClick(position);
+                }
+            }
+        });
 
     }
+
+
 
     @Override
     public int getItemCount() {
@@ -65,10 +89,18 @@ public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAd
                     textViewId = itemView.findViewById(R.id.textViewId);
                     System.out.println(textViewId.getText());
                     textViewName = itemView.findViewById(R.id.textViewName);
+                    System.out.println(textViewName.getText());
                 }
 
+
         }
+    public interface OnItemClickListener
+    {
+        void onItemClick(int position);
     }
+
+    }
+
 
 
 

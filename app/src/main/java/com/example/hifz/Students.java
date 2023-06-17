@@ -6,6 +6,8 @@ public class Students {
     private int id;
    // private int imageID;
     private String name;
+    private String age;
+    private String sclass;
     private String sabaq;
     private String sabaqi;
     private String manzil;
@@ -13,12 +15,28 @@ public class Students {
     public Students(int id, String name, String sabaq, String sabaqi, String manzil) {
         this.id = id;
         this.name = name;
+
         this.sabaq = sabaq;
         this.sabaqi = sabaqi;
         this.manzil = manzil;
     }
-
+    public Students( String name) {
+        this.id=0;
+        this.name = name;
+        this.sabaq = "sabaq";
+        this.sabaqi = "sabaqi";
+        this.manzil = "manzil";
+    }
     public Students(int id, String name) {
+        this.id = id;
+        this.name = name;
+        this.sabaq = "sabaq";
+        this.sabaqi = "sabaqi";
+        this.manzil = "manzil";
+    }
+    public Students( String name, String age, String sclass) {
+        this.age=age;
+        this.sclass=sclass;
         this.id = id;
         this.name = name;
         this.sabaq = "sabaq";
