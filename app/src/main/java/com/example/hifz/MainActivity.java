@@ -90,7 +90,9 @@ public class MainActivity extends AppCompatActivity {
                 // Handle item click event here
                 // You can access the clicked position or item data
                 Toast.makeText(MainActivity.this, "Clicked on " + student.getName(), Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(MainActivity.this,Std.class);
+                Intent intent=new Intent(MainActivity.this,individual.class);
+                intent.putExtra("myObject", student);
+
                 // intent.putExtra("db", (Serializable) db);
                 startActivity(intent);
             }
