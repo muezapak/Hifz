@@ -8,9 +8,9 @@ public class Students implements Serializable {
     private String name;
     private String age;
     private String sclass;
-    private String sabaq;
-    private String sabaqi;
-    private String manzil;
+    private int sabaq;
+    private int sabaqi;
+    private int manzil;
 
     public String getSclass() {
         return sclass;
@@ -22,7 +22,7 @@ public class Students implements Serializable {
 
 
 
-    public Students(int id, String name,String age,String sclass, String sabaq, String sabaqi, String manzil) {
+    public Students(int id, String name, String age, String sclass, int sabaq, int sabaqi, int manzil) {
         this.id = id;
         this.name = name;
         this.sclass=sclass;
@@ -35,20 +35,14 @@ public class Students implements Serializable {
 
 
 
-    public Students( String name) {
-        this.id=0;
-        this.name = name;
-        this.sabaq = "sabaq";
-        this.sabaqi = "sabaqi";
-        this.manzil = "manzil";
-    }
-    public Students(int id, String name) {
-        this.id = id;
-        this.name = name;
-        this.sabaq = "sabaq";
-        this.sabaqi = "sabaqi";
-        this.manzil = "manzil";
-    }
+
+//    public Students(int id, String name) {
+//        this.id = id;
+//        this.name = name;
+//        this.sabaq = "sabaq";
+//        this.sabaqi = "sabaqi";
+//        this.manzil = "manzil";
+//    }
 
     public String getAge() {
         return age;
@@ -63,9 +57,9 @@ public class Students implements Serializable {
         this.sclass=sclass;
         this.id = id;
         this.name = name;
-        this.sabaq = "sabaq";
-        this.sabaqi = "sabaqi";
-        this.manzil = "manzil";
+        this.sabaq = 1;
+        this.sabaqi = 1;
+        this.manzil = 1;
     }
     public int getId() {
         return id;
@@ -83,27 +77,27 @@ public class Students implements Serializable {
         this.name = name;
     }
 
-    public String getSabaq() {
+    public int getSabaq() {
         return sabaq;
     }
 
-    public void setSabaq(String sabaq) {
+    public void setSabaq(int sabaq) {
         this.sabaq = sabaq;
     }
 
-    public String getSabaqi() {
+    public int getSabaqi() {
         return sabaqi;
     }
 
-    public void setSabaqi(String sabaqi) {
+    public void setSabaqi(int sabaqi) {
         this.sabaqi = sabaqi;
     }
 
-    public String getManzil() {
+    public int getManzil() {
         return manzil;
     }
 
-    public void setManzil(String manzil) {
+    public void setManzil(int manzil) {
         this.manzil = manzil;
     }
 }

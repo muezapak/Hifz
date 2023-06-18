@@ -74,9 +74,9 @@ public class DbHelper extends SQLiteOpenHelper {
         values.put(COLUMN_NAME, student.getName());
         values.put(COLUMN_AGE, student.getAge());
         values.put(COLUMN_CLASS, student.getSclass());
-        values.put(COLUMN_SABAQ, student.getSabaq());
-        values.put(COLUMN_SABAQI, student.getSabaqi());
-        values.put(COLUMN_MANZIL, student.getManzil());
+        values.put(COLUMN_SABAQ,  String.valueOf(student.getSabaq()));
+        values.put(COLUMN_SABAQI, String.valueOf(student.getSabaqi()));
+        values.put(COLUMN_MANZIL, String.valueOf(student.getManzil()));
 
        // values.put(COLUMN_ENROLL, student.isEnroll());
 
@@ -176,9 +176,9 @@ public class DbHelper extends SQLiteOpenHelper {
                @SuppressLint("Range") String name = cursor.getString(cursor.getColumnIndex(COLUMN_NAME));
                 @SuppressLint("Range") String age = cursor.getString(cursor.getColumnIndex(COLUMN_AGE));
                 @SuppressLint("Range") String sclass = cursor.getString(cursor.getColumnIndex(COLUMN_CLASS));
-                @SuppressLint("Range") String sabaq = cursor.getString(cursor.getColumnIndex(COLUMN_SABAQ));
-                @SuppressLint("Range") String sabaqi = cursor.getString(cursor.getColumnIndex(COLUMN_SABAQI));
-                @SuppressLint("Range") String manzil = cursor.getString(cursor.getColumnIndex(COLUMN_MANZIL));
+                @SuppressLint("Range") int sabaq = Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_SABAQ)));
+                @SuppressLint("Range") int sabaqi = Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_SABAQI)));
+                @SuppressLint("Range") int manzil = Integer.parseInt( cursor.getString(cursor.getColumnIndex(COLUMN_MANZIL)));
 //                @SuppressLint("Range")  String rollNo = cursor.getString(cursor.getColumnIndex(COLUMN_ROLLNO));
 //                @SuppressLint("Range") boolean isEnroll = cursor.getInt(cursor.getColumnIndex(COLUMN_ENROLL))>0;
                 Students s=new Students(id,name,age,sclass,sabaq,sabaqi,manzil);

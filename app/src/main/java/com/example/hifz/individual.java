@@ -42,6 +42,10 @@ public class individual extends AppCompatActivity {
 
 
 
+
+
+
+
 // Perform operations with the receivedObject
 
     }
