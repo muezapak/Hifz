@@ -9,14 +9,14 @@
     tools:context=".individual">
 
     <TextView
-        android:id="@+id/sabaq1"
+        android:id="@+id/manzil1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="125dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="29dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="60dp"
 
         android:text="Name:"
         android:textColor="@color/black"
@@ -36,7 +36,7 @@
         android:id="@+id/name1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="180dp"
         android:text="TextView"
         android:textSize="17dp"
@@ -127,21 +127,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="25dp"
         android:text="Manzil"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
-        android:id="@+id/manzil1"
+        android:id="@+id/sabaq1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="195dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="34dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/sabaqi1"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="24dp"
+        android:text="hgjgkjhkhj"
+        app:layout_constraintBottom_toTopOf="@+id/sabaq2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -160,8 +159,8 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="50dp"
         android:text="Sabaqi"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -171,20 +170,18 @@
         android:id="@+id/sabaqi1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="195dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="22dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/sabaq1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/manzil1"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="298dp"
         android:text="Lesson"
         android:textColor="@android:color/holo_red_dark"
@@ -194,4 +191,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
+    <CheckBox
+        android:id="@+id/cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="25dp"
+        android:text="Learnt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="63dp"
+        android:text="Done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sabaq2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="28dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/sabaqi1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

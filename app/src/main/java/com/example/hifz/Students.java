@@ -57,9 +57,9 @@ public class Students implements Serializable {
         this.sclass=sclass;
         this.id = id;
         this.name = name;
-        this.sabaq = 1;
-        this.sabaqi = 1;
-        this.manzil = 1;
+        this.sabaq = 0;
+        this.sabaqi = -1;
+        this.manzil = -1;
     }
     public int getId() {
         return id;
@@ -98,6 +98,7 @@ public class Students implements Serializable {
     }
 
     public void setManzil(int manzil) {
+
         this.manzil = manzil;
     }
 }

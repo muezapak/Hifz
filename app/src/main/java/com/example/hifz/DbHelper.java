@@ -129,22 +129,28 @@ public class DbHelper extends SQLiteOpenHelper {
             values.put("name", name);
             db.insert(TABLE_NAME, null, values);
         }
-       // int i=getRowCount();
-      //  System.out.println("size\t"+i);
+
 
     }
 
-//    public void updateStudent(Student student) {
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        ContentValues values = new ContentValues();
-//        values.put(COLUMN_NAME, student.getName());
-//        values.put(COLUMN_ROLLNO, student.getRollNo());
-//        values.put(COLUMN_ENROLL, student.isEnroll());
-//
-//        db.update(TABLE_NAME, values, COLUMN_ROLLNO + " = ?", new String[] {student.getRollNo()});
-//        db.close();
-//    }
-//
+    public void updateStudent(Students student) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_NAME, student.getName());
+        values.put(COLUMN_AGE, student.getAge());
+        values.put(COLUMN_CLASS, student.getSclass());
+        values.put(COLUMN_SABAQ,  String.valueOf(student.getSabaq()));
+        values.put(COLUMN_SABAQI, String.valueOf(student.getSabaqi()));
+        values.put(COLUMN_MANZIL, String.valueOf(student.getManzil()));
+
+        db.update(TABLE_NAME, values, COLUMN_ID + " = ?", new String[] {String.valueOf(student.getId())});
+        db.close();
+    }
+
+
+
+
+
 //    public void deleteStudent(String rollNo) {
 //        SQLiteDatabase db = this.getWritableDatabase();
 //        db.delete(TABLE_NAME, COLUMN_ROLLNO + " = ?", new String[] {rollNo});
