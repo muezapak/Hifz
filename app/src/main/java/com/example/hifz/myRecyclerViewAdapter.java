@@ -89,7 +89,7 @@ public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAd
 
                     textViewId = itemView.findViewById(R.id.textViewId);
                     System.out.println(textViewId.getText());
-                    textViewName = itemView.findViewById(R.id.textViewName);
+                    textViewName = itemView.findViewById(R.id.name2);
                     System.out.println(textViewName.getText());
                 }
 
