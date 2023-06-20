@@ -89,8 +89,6 @@ public class myRecyclerViewAdapter1 extends RecyclerView.Adapter<myRecyclerViewA
 
 
 
-
-
     }
 
 
