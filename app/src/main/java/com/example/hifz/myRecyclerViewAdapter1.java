@@ -71,8 +71,8 @@ public class myRecyclerViewAdapter1 extends RecyclerView.Adapter<myRecyclerViewA
 
         String sab = data1.getParaName(holder.data.getSabaqi());
         String  man=data1.getParaName(holder.data.getManzil());
-        holder.sabaqiText.setText(sab+" sabqi");
-        holder.manzilText.setText(man+" man");
+        holder.sabaqiText.setText(sab);
+        holder.manzilText.setText(man);
 
 
 

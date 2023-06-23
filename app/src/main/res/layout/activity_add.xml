@@ -21,6 +21,7 @@
 
     <Button
         android:id="@+id/save"
+
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="105dp"
@@ -68,6 +69,7 @@
         android:layout_marginEnd="106dp"
         android:layout_marginBottom="208dp"
         android:text="Back"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

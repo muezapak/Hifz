@@ -19,6 +19,7 @@
         android:layout_marginEnd="165dp"
         android:layout_marginBottom="50dp"
         android:text="Learnt"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.406"
@@ -31,6 +32,7 @@
         android:layout_marginStart="158dp"
         android:layout_marginEnd="165dp"
         android:layout_marginBottom="9dp"
+
         android:text="Not Learnt"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"

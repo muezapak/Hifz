@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     myRecyclerViewAdapter adapter;
     Button button;
     Button search;
+    Button git;
     EditText edit;
 
     RecyclerView.LayoutManager layoutManager;
@@ -36,6 +38,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
+        git=findViewById(R.id.git);
+        git.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               // String githubUrl = "https://github.com/RattlingLord999/HifzApp";
+                String githubUrl = "https://github.com/muezapak/Hifz";
+                // Create an intent to open the GitHub repository in a browser
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(githubUrl));
+                startActivity(intent);
+
+        }
+});
         //hello
 
 //        Students s1=new Students(1,"Ali");
